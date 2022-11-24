@@ -348,7 +348,6 @@ app.post('/transfer-ownership', async (req, res) => {
 app.post('done-auction', async (req, res) => {
   console.log('done-auction', req.body.auctionID);
 
-  //fix why? duplicate? -> transfer-ownership
   const rlpTXResult_done = await auctionMiddleware.doneAuction(auctionID);
   if (rlpTXResult_done != 'success') {
     res.send('failed to done auction in auction management..');
