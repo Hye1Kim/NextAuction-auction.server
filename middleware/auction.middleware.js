@@ -19,6 +19,7 @@ const contentContract = new caver.contract(CONTRACTS.DEPLOYED_ABI_CONTENT, CONTR
 const transactions = require('../lib/transactions');
 const request = require('request');
 
+/* @dev zzerous Hye1Kim */
 
 async function _genRawTX(_to, _data) {
     const rawTX = new caver.transaction.feeDelegatedSmartContractExecution({
